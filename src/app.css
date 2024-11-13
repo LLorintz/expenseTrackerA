@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Roboto", serif;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-color: rgb(235, 246, 243);
+}
+
+.container{
+    width: 350px;
+}
+
+.header{
+    margin-bottom: 20px;
+}
+
+.header h1{
+    font-size: 1.6rem;
+}
+
+.balance{
+    margin-bottom: 15px;
+}
+
+h2{
+    font-size: 1rem;
+}
+
+h3{
+    font-size: 1.6rem;
+}
+
+.inc-exp{
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+    box-shadow: 4px 4px 4px rgb(170,170,170);
+    padding: 5px;
+    margin: auto;
+}
+
+.inc-exp div{
+    text-align: center;
+}
+
+.inc-exp div p:first-child{
+    font-weight: 800;
+}
+
+.list{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.list h2{
+    margin-bottom: 10px;
+}
+
+li{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    box-shadow: 4px 4px 4px rgb(170,170,170);
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+li button{
+    background-color: red;
+    padding: 5px;
+    color: white;
+    border:none;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+li:hover button{
+    visibility: visible;
+}
+
+.minus{
+    border-right: 3px solid red;
+}
+
+.plus{
+    border-right: 3px solid  green;
+}
+
+label{
+    display: inline-block;
+}
+
+input{
+    width: 100%;
+    border: 1px solid rgb(215, 212, 212);
+    outline: none;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.addBtn{
+    width: 100%;
+    border:none;
+    background-color: #9c88ff;
+    padding:5px;
+    color:white;
+    font-size: 1.2rem;
+}
