@@ -8,20 +8,18 @@ type transactioType={
 
 type GlobalState = {
     transactions:transactioType[];
-    deleteTransaction:(id:number)=>void
+    deleteTransaction:(id:number)=>void;
+    addTransaction:(t:transactioType)=>void;
 }
 
 const initialState = {
-    transactions:[
-        {id:1, text:'Flowers',amount:-30},
-        {id:2, text:'Salary',amount:300},
-        {id:3, text:'Books',amount:-10},
-    ]
+    transactions:[   ]
 }
 
 export const GlobalContext = createContext<GlobalState>({
     transactions:initialState.transactions,
-    deleteTransaction:()=>{}
+    deleteTransaction:()=>{},
+    addTransaction:()=>{},
 })
 
 type childreProps={
@@ -36,8 +34,12 @@ const GlobalProvider = ({children}:childreProps) => {
         setTransactions(transactions.filter(tranaction=>tranaction.id!==id))
     }
 
+    const addTransaction = (t:transactioType)=>{
+        setTransactions(prev=>[...prev,t])
+    }
+
   return (
-    <GlobalContext.Provider value={{transactions,deleteTransaction}}>
+    <GlobalContext.Provider value={{transactions,deleteTransaction,addTransaction}}>
         {children}
     </GlobalContext.Provider>
   )
